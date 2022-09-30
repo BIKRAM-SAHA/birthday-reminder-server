@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const conn2db = require("./config/db");
 const bodyparser = require("body-parser");
 const birthdayRoute = require("./routes/birthdaysRoute");
@@ -13,6 +14,12 @@ conn2db();
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use("/", userRoute);
 app.use("/birthday", birthdayRoute);
