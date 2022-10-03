@@ -8,7 +8,7 @@ const {
   updateBirthday,
   deleteBirthday,
 } = require("../controllers/birthdayController");
-const protect = require("../middleware.js/authMiddleware");
+const protect = require("../middlewares/authMiddleware");
 
 router.get("/", protect, getBirthdays).post("/", protect, createBirthday);
 

@@ -5,7 +5,7 @@ const conn2db = require("./config/db");
 const bodyparser = require("body-parser");
 const birthdayRoute = require("./routes/birthdaysRoute");
 const userRoute = require("./routes/userRoute");
-const errorMiddleware = require("./middleware.js/errorMiddleware");
+const errorMiddleware = require("./middlewares/errorMiddleware");
 
 const PORT = process.env.PORT || 5000;
 
