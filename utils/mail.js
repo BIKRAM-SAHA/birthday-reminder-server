@@ -61,7 +61,7 @@ const mail = async () => {
         }
       }
     );
-    // console.log("Reminder sent: %s", info.messageId);
+    console.log("Reminder sent: %s", info.messageId);
   });
 };
 
